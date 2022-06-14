@@ -10,7 +10,6 @@ apt-get update
 apt-get install net-tools
 apt-get install qemu-kvm virt-manager bridge-utils qemu-system
 nano /etc/libvirt/libvirtd.conf
-nano /etc/libvirt/libvirtd.conf
-nano /etc/libvirt/libvirtd.conf
  /etc/init.d/libvirtd restart
  /etc/init.d/libvirtd status
+ virsh list
