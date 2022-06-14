@@ -1,0 +1,16 @@
+sudo -s
+free -m
+top
+apt-cache search net-tools
+apt-get install net-tools
+netstat -ntlp
+apt-cache search qemu-kv
+apt-cache install qemu-kv
+apt-get update
+apt-get install net-tools
+apt-get install qemu-kvm virt-manager bridge-utils qemu-system
+nano /etc/libvirt/libvirtd.conf
+nano /etc/libvirt/libvirtd.conf
+nano /etc/libvirt/libvirtd.conf
+ /etc/init.d/libvirtd restart
+ /etc/init.d/libvirtd status
