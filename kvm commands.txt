@@ -10,6 +10,41 @@ apt-get update
 apt-get install net-tools
 apt-get install qemu-kvm virt-manager bridge-utils qemu-system
 nano /etc/libvirt/libvirtd.conf
+
+##COMMENT EVERYTHING
+##COPY PASTE BELOW LINES
+
+listen_addr = "0.0.0.0"
+unix_sock_group = "libvirt"
+unix_sock_ro_perms = "0777"
+unix_sock_rw_perms = "0777"
+unix_sock_dir = "/var/run/libvirt"
+auth_unix_ro = "none"
+auth_unix_rw = "none"
+
+/etc/init.d/libvirtd restart
+/etc/init.d/libvirtd status
+
+[INSTALLATION LINK OF GUEST OS]
+[https://www.google.com/url?hl=en&q=https://download.cirros-cloud.net/0.3.6/cirros-0.3.6-i386-disk.img&sa=D&source=meet&ust=1652599184463660&usg=AOvVaw1a0wlQwjEq69zJDkJ4wHUx]
+
+virsh list
+
+virt-manager
+
+[BROWSE AND SELECT GUEST OS LOCATION]
+
+virsh list
+
+==============================================
+
+___IF ERROR____
+
+sudo lsof /var/lib/dpkg/lock
+sudo lsof /var/lib/apt/lists/lock
+sudo lsof /var/cache/apt/archives/lock
+
+pkill -9 process_id
  /etc/init.d/libvirtd restart
  /etc/init.d/libvirtd status
  virsh list
